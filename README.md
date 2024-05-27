@@ -7,5 +7,6 @@ Make custom editor tools that can be installed as unity package in any unity pro
 
 
 - [ ] create project folders
-- [ ] assign color to folders within the above functionality
-- [ ] ..
+- [ ] change color of folder
+- [ ] change icon of the folder/ reset icon
+- [ ] save data using editorprefs/custom json file
