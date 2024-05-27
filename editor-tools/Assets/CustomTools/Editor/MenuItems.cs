@@ -15,31 +15,32 @@ namespace RC
         [MenuItem("Assets/RC/Choose Icon or Color/Red", false, priority)]
         static void Red()
         {
-            Debug.Log("Coloring the folder blue");
+            ColoredFolders.SetIconName("Red");
         }
 
         [MenuItem("Assets/RC/Choose Icon or Color/Green", false, priority)]
         static void Green()
         {
-            Debug.Log("Coloring the folder blue");
+            ColoredFolders.SetIconName("Green");
         }
 
         [MenuItem("Assets/RC/Choose Icon or Color/Blue", false, priority)]
         static void Blue()
         {
-            Debug.Log("Coloring the folder blue");
+            ColoredFolders.SetIconName("Blue");
         }
 
         [MenuItem("Assets/RC/Choose Icon or Color/CustomIcon", false, priority + 11)]
         static void CustomIcon()
         {
-            Debug.Log("Coloring the folder blue");
+            ColoredFolders.ResetFolderIcon();
         }
 
         [MenuItem("Assets/RC/Choose Icon or Color/ResetIcon", false, priority + 23)]
         static void ResetIcon()
         {
-            Debug.Log("Coloring the folder blue");
+            Debug.Log("Icon set to Default");
+            ColoredFolders.ResetFolderIcon();
         }
 
         [MenuItem("Assets/RC/Choose Icon or Color/Red", true)]
