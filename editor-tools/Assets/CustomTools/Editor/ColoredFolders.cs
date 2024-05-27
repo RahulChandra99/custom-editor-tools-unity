@@ -27,7 +27,7 @@ namespace RC
 
             string iconGuid = EditorPrefs.GetString(guid, "");
 
-            if (iconGuid == "")
+            if (iconGuid == "" || iconGuid == "00000000000000000000000000000000")
                 return;
 
             EditorGUI.DrawRect(folderRect, backgroundColor);

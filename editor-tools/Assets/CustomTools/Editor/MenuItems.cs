@@ -10,7 +10,7 @@ namespace RC
 
     static class MenuItems
     {
-        const int priority = 100000;
+        const int priority = 10000;
 
         [MenuItem("Assets/RC/Choose Icon or Color/Red", false, priority)]
         static void Red()
@@ -33,7 +33,7 @@ namespace RC
         [MenuItem("Assets/RC/Choose Icon or Color/CustomIcon", false, priority + 11)]
         static void CustomIcon()
         {
-            ColoredFolders.ResetFolderIcon();
+            CustomFoldersEditor.ChooseCustomIcon();
         }
 
         [MenuItem("Assets/RC/Choose Icon or Color/ResetIcon", false, priority + 23)]
