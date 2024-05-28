@@ -12,31 +12,31 @@ namespace RC
     {
         const int priority = 10000;
 
-        [MenuItem("Assets/RC/Choose Icon or Color/Red", false, priority)]
+        [MenuItem("Assets/RC/Red", false, priority)]
         static void Red()
         {
             ColoredFolders.SetIconName("Red");
         }
 
-        [MenuItem("Assets/RC/Choose Icon or Color/Green", false, priority)]
+        [MenuItem("Assets/RC/Green", false, priority)]
         static void Green()
         {
             ColoredFolders.SetIconName("Green");
         }
 
-        [MenuItem("Assets/RC/Choose Icon or Color/Blue", false, priority)]
+        [MenuItem("Assets/RC/Blue", false, priority)]
         static void Blue()
         {
             ColoredFolders.SetIconName("Blue");
         }
 
-        [MenuItem("Assets/RC/Choose Icon or Color/CustomIcon", false, priority + 11)]
+        [MenuItem("Assets/RC/CustomIcon", false, priority + 11)]
         static void CustomIcon()
         {
             CustomFoldersEditor.ChooseCustomIcon();
         }
 
-        [MenuItem("Assets/RC/Choose Icon or Color/ResetIcon", false, priority + 23)]
+        [MenuItem("Assets/RC/ResetIcon", false, priority + 23)]
         static void ResetIcon()
         {
             Debug.Log("Icon set to Default");

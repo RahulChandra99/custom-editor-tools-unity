@@ -33,8 +33,6 @@ namespace RC
 
                 string folderTexGuid = AssetDatabase.GUIDFromAssetPath(AssetDatabase.GetAssetPath(selectedObject)).ToString();
 
-                Debug.Log(folderTexGuid);
-
                 EditorPrefs.SetString(selectedFolderGuid, folderTexGuid);
             }
         }
@@ -45,7 +43,7 @@ namespace RC
 
 
             controlID = EditorGUIUtility.GetControlID(FocusType.Passive);
-            EditorGUIUtility.ShowObjectPicker<Sprite>(null, false, "", controlID);
+            EditorGUIUtility.ShowObjectPicker<Texture2D>(null, false, "", controlID);
         }
     }
 }
