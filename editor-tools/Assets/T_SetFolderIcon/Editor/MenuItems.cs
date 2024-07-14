@@ -12,42 +12,44 @@ namespace RC
     {
         const int priority = 10000;
 
-        [MenuItem("Assets/RC/Red", false, priority)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/Red", false, priority)]
         static void Red()
         {
             ColoredFolders.SetIconName("Red");
         }
 
-        [MenuItem("Assets/RC/Green", false, priority)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/Green", false, priority)]
         static void Green()
         {
             ColoredFolders.SetIconName("Green");
         }
 
-        [MenuItem("Assets/RC/Blue", false, priority)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/Blue", false, priority)]
         static void Blue()
         {
             ColoredFolders.SetIconName("Blue");
         }
+        
+        
 
-        [MenuItem("Assets/RC/CustomIcon", false, priority + 11)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/CustomIcon", false, priority + 11)]
         static void CustomIcon()
         {
             CustomFoldersEditor.ChooseCustomIcon();
         }
 
-        [MenuItem("Assets/RC/ResetIcon", false, priority + 23)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/ResetIcon", false, priority + 23)]
         static void ResetIcon()
         {
             Debug.Log("Icon set to Default");
             ColoredFolders.ResetFolderIcon();
         }
 
-        [MenuItem("Assets/RC/Choose Icon or Color/Red", true)]
-        [MenuItem("Assets/RC/Choose Icon or Color/Green", true)]
-        [MenuItem("Assets/RC/Choose Icon or Color/Blue", true)]
-        [MenuItem("Assets/RC/Choose Icon or Color/CustomIcon", true)]
-        [MenuItem("Assets/RC/Choose Icon or Color/ResetIcon", true)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/Red", true)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/Green", true)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/Blue", true)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/CustomIcon", true)]
+        [MenuItem("Assets/CustomTools(Folder Icon)/ResetIcon", true)]
         static bool ValidateFunction()
         {
             if(Selection.activeObject == null)

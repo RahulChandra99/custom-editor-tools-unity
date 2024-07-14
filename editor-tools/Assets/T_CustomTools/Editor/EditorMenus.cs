@@ -7,11 +7,13 @@ namespace RC
 {
     public class EditorMenus
     {
-        [MenuItem("CustomTools/Project/Project Folder Setup")]
+        [MenuItem("CustomTools/Project Tools/Project Folder Setup")]
         public static void IniProjectFolderSetupTool()
         {
             ProjectSetup_window.InitWindow();
         }
+        
+        
     }
 }
 
