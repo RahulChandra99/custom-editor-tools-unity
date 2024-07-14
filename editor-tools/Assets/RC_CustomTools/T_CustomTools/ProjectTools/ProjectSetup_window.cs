@@ -104,30 +104,28 @@ namespace RC
             {
                 folderNames.Clear();
                 folderNames.Add("Animation");
-                folderNames.Add("Objects");
-                folderNames.Add("Materials");
-                folderNames.Add("Prefabs");
+                folderNames.Add("Audio");
+                folderNames.Add("Models");
+                folderNames.Add("Sprites");
+                folderNames.Add("Textures");
                 
                 CreatingFolders(rootPath + "/Art", folderNames);
+                
             }
             
-            rootInfo = Directory.CreateDirectory(rootPath + "/Code");
-            if (rootInfo.Exists)
-            {
-                folderNames.Clear();
-                folderNames.Add("Animation");
-                folderNames.Add("Objects");
-                folderNames.Add("Materials");
-                folderNames.Add("Prefabs");
-                
-                CreatingFolders(rootPath + "/Code", folderNames);
-            }
+            rootInfo = Directory.CreateDirectory(rootPath + "/Scripts");
+            
+            rootInfo = Directory.CreateDirectory(rootPath + "/Prefabs");
+            
+            rootInfo = Directory.CreateDirectory(rootPath + "/ThirdPartyAssets");
+           
             
             //Creating Scenes
             DirectoryInfo sceneInfo = Directory.CreateDirectory(rootPath + "/Scenes");
             if (sceneInfo.Exists)
             {
                 CreateScene(rootPath + "/Scenes", projectName + "_Main");
+                CreateScene(rootPath + "/Scenes", projectName + "_UI");
             }
         }
         
@@ -142,23 +140,50 @@ namespace RC
             {
                 folderNames.Clear();
                 folderNames.Add("Animation");
-                folderNames.Add("Objects");
-                folderNames.Add("Materials");
-                folderNames.Add("Prefabs");
+                folderNames.Add("Audio");
+                folderNames.Add("Fonts");
+                folderNames.Add("Models");
+                folderNames.Add("PhysicMaterials");
+                folderNames.Add("Shaders");
+                folderNames.Add("Sprites");
+                folderNames.Add("Textures");
                 
                 CreatingFolders(rootPath + "/Art", folderNames);
+                
+                folderNames.Clear();
+                folderNames.Add("AnimationClips ");
+                folderNames.Add("Animators");
+                CreatingFolders(rootPath + "/Art/Animation", folderNames);
+                
+                folderNames.Clear();
+                folderNames.Add("AudioClips ");
+                folderNames.Add("AudioMixers");
+                CreatingFolders(rootPath + "/Art/Audio", folderNames);
             }
             
             rootInfo = Directory.CreateDirectory(rootPath + "/Code");
             if (rootInfo.Exists)
             {
                 folderNames.Clear();
-                folderNames.Add("Animation");
-                folderNames.Add("Objects");
-                folderNames.Add("Materials");
-                folderNames.Add("Prefabs");
+                folderNames.Add("Editor");
+                folderNames.Add("Scripts");
+                folderNames.Add("Shaders");
                 
                 CreatingFolders(rootPath + "/Code", folderNames);
+            }
+            
+            rootInfo = Directory.CreateDirectory(rootPath + "/Prefabs");
+            
+            
+            rootInfo = Directory.CreateDirectory(rootPath + "/Resources");
+            if (rootInfo.Exists)
+            {
+                folderNames.Clear();
+                folderNames.Add("Managers");
+                folderNames.Add("UI");
+                folderNames.Add("ThirdPartyAssets");
+                
+                CreatingFolders(rootPath + "/Resources", folderNames);
             }
             
             //Creating Scenes
@@ -166,8 +191,11 @@ namespace RC
             if (sceneInfo.Exists)
             {
                 CreateScene(rootPath + "/Scenes", projectName + "_Main");
+                CreateScene(rootPath + "/Scenes", projectName + "_UI");
             }
         }
+        
+        
 
         void CreatingFolders(string aPath, List<string> folders)
         {
@@ -179,7 +207,7 @@ namespace RC
 
         void CreateScene(string aPath, string aName)
         {
-            Scene curScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects);
+            Scene curScene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects,NewSceneMode.Single);
             EditorSceneManager.SaveScene(curScene, aPath + "/" + aName + ".unity", true);
         }
 

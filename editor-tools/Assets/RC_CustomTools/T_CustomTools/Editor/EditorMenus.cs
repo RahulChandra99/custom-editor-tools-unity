@@ -13,7 +13,11 @@ namespace RC
             ProjectSetup_window.InitWindow();
         }
         
-        
+        [MenuItem("CustomTools/Scene Tools/Create Game Manager")]
+        public static void CreateGM()
+        {
+            CreateGameManager.CreateGameObjectWithComponent("GameManager");
+        }
     }
 }
 

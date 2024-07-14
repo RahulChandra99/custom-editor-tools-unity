@@ -63,7 +63,20 @@ namespace RC
             string folderPath = AssetDatabase.GetAssetPath(Selection.activeObject);
             string folderGuid = AssetDatabase.GUIDFromAssetPath(folderPath).ToString();
 
-            string iconPath = "Assets/T_SetFolderIcon/Icons/Colors/" + m_iconName + ".png";
+            string iconPath = "Assets/RC_CustomTools/T_SetFolderIcon/Icons/Colors/" + m_iconName + ".png";
+            string iconGuid = AssetDatabase.GUIDFromAssetPath(iconPath).ToString();
+
+            EditorPrefs.SetString(folderGuid, iconGuid);
+
+            /*iconName = m_iconName;*/
+        }
+        
+        public static void SetSpecialIconName(string m_iconName)
+        {
+            string folderPath = AssetDatabase.GetAssetPath(Selection.activeObject);
+            string folderGuid = AssetDatabase.GUIDFromAssetPath(folderPath).ToString();
+
+            string iconPath = "Assets/RC_CustomTools/T_SetFolderIcon/Icons/CustomIcons/" + m_iconName + ".png";
             string iconGuid = AssetDatabase.GUIDFromAssetPath(iconPath).ToString();
 
             EditorPrefs.SetString(folderGuid, iconGuid);
