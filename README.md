@@ -20,7 +20,8 @@ Creating Folders:
 1. Navigate to Custom Tools > Project Tools > Project Folder Setup.
 2. Choose a name for the Parent folder structure and type of level of detail for project structure. 
 3. Click Create to generate the folder structure in your project.
-   ![](https://github.com/RahulChandra99/custom-editor-tools-unity/misc/FolderUsage.gif)
+ 
+![Screenshot 2024-07-14 085739](https://github.com/user-attachments/assets/c32e3936-00cd-40a4-ace0-f0e4f1cde739)
 
 Changing Folder Icons:
 
@@ -28,7 +29,8 @@ Changing Folder Icons:
 2. Right Click in the project panel, navigate to "CustomTools(Folder Icon)".
 3. Select the desired option from the list.
 4. The folder icon will update immediately in the Unity Editor.
-   ![](https://github.com/RahulChandra99/custom-editor-tools-unity/misc/IconUsage.gif)
+![Screenshot 2024-07-14 085757](https://github.com/user-attachments/assets/7ea8b97d-72e1-4258-bdaa-a43275e1d723)
+
 
 ## Example Scenarios
 - Game Development: Quickly set up a new project with a standardized folder structure including Scripts, Prefabs, Textures, and Scenes.
