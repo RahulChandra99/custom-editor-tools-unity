@@ -1,4 +1,14 @@
 # Editor Tools for Project Management
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Key Features](#key-features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+    - [Creating Folders](#creating-folders)
+    - [Changing Folder Icons](#changing-folder-icons)
+5. [Example Scenarios](#example-scenarios)
+6. [Conclusion](#conclusion)
  
 ## Overview
 This package allows you to automate the creation of project folders, customize folder icons, and enhance the overall organization of your Unity projects. With a focus on ease of use and customization, this package is ideal for developers looking to maintain a clean and efficient project structure.
@@ -15,7 +25,7 @@ To install the "Editor Tools for Project Management" package, follow these steps
 3. Setup: After importing, a new menu item "Custom Tools" will appear in the Unity menu bar, giving you access to all the features.
 
 ## Usage
-Creating Folders:
+### Creating Folders:
 
 1. Navigate to Custom Tools > Project Tools > Project Folder Setup.
 2. Choose a name for the Parent folder structure and type of level of detail for project structure. 
@@ -23,7 +33,7 @@ Creating Folders:
  
 ![Screenshot 2024-07-14 085739](https://github.com/user-attachments/assets/c32e3936-00cd-40a4-ace0-f0e4f1cde739)
 
-Changing Folder Icons:
+### Changing Folder Icons:
 
 1. Select the folder(s) you wish to customize.
 2. Right Click in the project panel, navigate to "CustomTools(Folder Icon)".
